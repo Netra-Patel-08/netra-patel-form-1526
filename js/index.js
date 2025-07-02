@@ -8,7 +8,7 @@ let btn = document.getElementById('submit-button');
 const feedbackDiv = document.getElementById('feedback');
 
 // Declare variable that stores regular expression for email
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // READY TO START CODING
 // define event-handler
@@ -37,7 +37,7 @@ function handleForm() {
     // Check if email is not empty.
     if (em.value.trim() !== '') {
         // Check if email is valid.
-        if (emailRegex.test(em.value.trim())) {
+        if (emRegex.test(em.value.trim())) {
             // Pass the collected value to your object "ui".
             ui.email = em.value.trim();
         } else {
